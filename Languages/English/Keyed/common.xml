@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+    <LumenControl.LoadingLabel>Lumen Control Loading</LumenControl.LoadingLabel>
+    <LumenControl.SettingsTitle>Lumen Control</LumenControl.SettingsTitle>
+
+    <LumenControl.AdjustGlowRadius>Adjust glow radius</LumenControl.AdjustGlowRadius>
+    <LumenControl.AdjustGlowRadiusDesc>Change the glow radius of this light.</LumenControl.AdjustGlowRadiusDesc>
+
+    <LumenControl.BaseRadius>Base radius: {0}</LumenControl.BaseRadius>
+    <LumenControl.CurrentRadius>Current radius: {0}</LumenControl.CurrentRadius>
+
+    <LumenControl.ColumnLight>Light</LumenControl.ColumnLight>
+    <LumenControl.ColumnEnable>Enable radius control</LumenControl.ColumnEnable>
+    <LumenControl.ColumnMinimum>Minimum</LumenControl.ColumnMinimum>
+    <LumenControl.ColumnMaximum>Maximum</LumenControl.ColumnMaximum>
+    <LumenControl.LightRow>{0} ({1}), base radius {2}</LumenControl.LightRow>
+    <LumenControl.Reset>Reset</LumenControl.Reset>
+</LanguageData>
