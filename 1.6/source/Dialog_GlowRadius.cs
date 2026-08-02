@@ -22,7 +22,7 @@ namespace Lumen_Control
 
         public override void DoWindowContents(Rect inRect)
         {
-            if (glower.parent.Destroyed || !ModSettings.TryGetEnabledRule(glower.parent.def, out LightRadiusRule rule))
+            if (glower == null || glower.parent == null || glower.parent.Destroyed || !ModSettings.TryGetEnabledRule(glower.parent.def, out LightRadiusRule rule))
             {
                 Close();
                 return;
@@ -38,7 +38,9 @@ namespace Lumen_Control
             Widgets.Label(new Rect(0f, curY, inRect.width, 24f), "LumenControl.CurrentRadius".Translate(proposedRadius.ToString("F1")));
             curY += 30f;
 
-            proposedRadius = Widgets.HorizontalSlider(new Rect(0f, curY, inRect.width, 24f), proposedRadius, rule.minRadius, rule.maxRadius, roundTo: 0.1f);
+            float minRadius = Mathf.Min(rule.minRadius, rule.maxRadius);
+            float maxRadius = Mathf.Max(rule.minRadius, rule.maxRadius);
+            proposedRadius = Widgets.HorizontalSlider(new Rect(0f, curY, inRect.width, 24f), proposedRadius, minRadius, maxRadius, roundTo: 0.1f);
             curY += 40f;
 
             float buttonWidth = (inRect.width - 10f) / 2f;
