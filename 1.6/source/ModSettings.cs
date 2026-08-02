@@ -70,6 +70,11 @@ namespace Lumen_Control
 
         public static void RemoveInvalidRuleEntries()
         {
+            if (DefDatabase<ThingDef>.DefCount == 0)
+            {
+                return;
+            }
+
             List<string> invalidKeys = new List<string>();
             foreach (string defName in LightRulesByDefName.Keys)
             {
