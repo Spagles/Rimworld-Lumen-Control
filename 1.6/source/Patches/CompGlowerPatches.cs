@@ -31,9 +31,12 @@ namespace Lumen_Control.Patches
     {
         public static IEnumerable<Gizmo> Postfix(IEnumerable<Gizmo> __result, CompGlower __instance)
         {
-            foreach (Gizmo gizmo in __result)
+            if (__result != null)
             {
-                yield return gizmo;
+                foreach (Gizmo gizmo in __result)
+                {
+                    yield return gizmo;
+                }
             }
 
             if (!ModSettings.TryGetEnabledRule(__instance.parent.def, out _))
