@@ -123,19 +123,6 @@ namespace Lumen_Control
             {
                 rule.maxRadius = value;
             }
-
-            float minBefore = rule.minRadius;
-            float maxBefore = rule.maxRadius;
-            ModSettings.NormalizeRule(rule);
-
-            if (!Mathf.Approximately(minBefore, rule.minRadius))
-            {
-                MinBuffers[def.defName] = rule.minRadius.ToString("F1");
-            }
-            if (!Mathf.Approximately(maxBefore, rule.maxRadius))
-            {
-                MaxBuffers[def.defName] = rule.maxRadius.ToString("F1");
-            }
         }
     }
 }
