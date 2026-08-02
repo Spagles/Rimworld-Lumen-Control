@@ -13,7 +13,7 @@ namespace Lumen_Control
     {
         public Mod(ModContentPack content) : base(content)
         {
-            LongEventHandler.QueueLongEvent(Init, "LumenControl.LoadingLabel", doAsynchronously: true, null);
+            LongEventHandler.QueueLongEvent(Init, "LumenControl.LoadingLabel", doAsynchronously: false, null);
         }
 
         private void Init()
