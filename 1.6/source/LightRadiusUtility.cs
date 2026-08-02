@@ -7,6 +7,11 @@ namespace Lumen_Control
     {
         public static void Apply(CompGlower glower, float requestedRadius)
         {
+            if (glower == null || glower.parent == null)
+            {
+                return;
+            }
+
             LightRadiusRule rule = ModSettings.GetOrCreateRule(glower.parent.def);
             if (rule == null)
             {
